@@ -1,0 +1,11 @@
+- name: Terminate EC2 instance
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Terminate EC2
+      amazon.aws.ec2_instance:
+        instance_ids: i-039c23be749ef851c  # ← Replace with your EC2 instance ID
+        state: absent
+        region: us-east-1                  # ← Replace with your region
