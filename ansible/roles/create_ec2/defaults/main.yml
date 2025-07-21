@@ -3,6 +3,6 @@
 # defaults file for ec2-roles/create_ec2
 instance_name: dev-platform-ansible
 region: us-east-1
-key_name: ansible-key1.pem        # Replace with your actual EC2 key pair name
+key_name: ec2-key.pem       # Replace with your actual EC2 key pair name
 instance_type: t2.micro
 ami: ami-0a7d80731ae1b2435     # Ubuntu 24.04 (HVM), SSD Volume Type for us-east-1
