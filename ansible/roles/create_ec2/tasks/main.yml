@@ -1,3 +1,19 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # tasks file for ec2-roles/create_ec2
+- name: Provision an EC2 instance
+  amazon.aws.ec2_instance:
+    name: "{{ instance_name }}"
+    key_name: "{{ key_name }}"
+    instance_type: "{{ instance_type }}"
+    image_id: "{{ ami }}"
+    region: "{{ region }}"
+    wait: true
+    count: 1
+    tags:
+      Name: "{{ instance_name }}"
+  register: ec2_result
+
+- name: Output instance public IP
+  debug:
+    var: ec2_result.instances[0].public_ip_address

@@ -1,0 +1,7 @@
+- name: Provision EC2 instance
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  roles:
+    - create_ec2
