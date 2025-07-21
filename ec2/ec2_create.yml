@@ -1,7 +1,0 @@
----
-# Task creation of ec2 instance
-
-- hosts: localhost
-  connection: local
-  roles:
-    - ec2
