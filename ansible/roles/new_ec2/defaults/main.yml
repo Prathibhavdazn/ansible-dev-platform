@@ -2,3 +2,4 @@
 ---
 # defaults file for roles/new_ec2
 type: t2.micro
+region: us-east-1
